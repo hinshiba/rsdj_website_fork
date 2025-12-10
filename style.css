@@ -8,13 +8,14 @@
 html,body {
     font-family: 'mplus', sans-serif;
     margin: 0;
+    overflow-x: hidden;
 }
 
 header{
     position: fixed;
-    background-color: #fff;
+    z-index: 10;
     display: flex;
-    width: 100svw;
+    width: 100%;
     left: 0;
     top: 0;
 }
@@ -26,40 +27,138 @@ header h1{
     margin: auto 0;
     font-size: 24px;
 }
-
+.bg_red{
+    background: linear-gradient(135deg, #ffffffe6,#f3b4ab);
+    margin: 0;
+    padding: 50px;
+}
 #top {
-    position: relative;
-    width: 300px;  /* 適宜調整 */
-    height: 300px;
-}
-
-#top img {
-    position: absolute;
-    top: 0;
-    left: 0;
+    height: 95vh;
     width: 100%;
-    height: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
 }
 
-.rotate-img {
-    animation: rotateAndScale 10s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+.top_sentenses{
+    position: absolute;
+    bottom: 20vh;
+    left: 0;
+    padding: 20px 10px 20px 30px;
+    background-color: #ffffffaa;
+    z-index: 9;
+}
+#top h1{
+    font-size: 60px;
+    word-break: keep-all;
+    margin: 0 0 20px 0;
+}
+#top a{
+    display: block;
+    width: calc(100% - 60px);
+    text-align: center;
+    text-decoration: none;
+    padding: 20px;
+    margin: 0;
+    color: #fff;
+    background-color: #ce412b;
+    box-shadow: #f3b4ab 7px 5px 0;
+    font-size: 20px;
+}
+#top a:hover{
+    background-color: #f3644e;
+    box-shadow: #f3b4ab 5px 3px 0;
+}
+.rust_gradation {
+    background: linear-gradient(90deg, #c7240b, #f3644e, #ce412b);
+    background-size: 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    animation: rustMove 6s ease-in-out infinite alternate;
+}
+
+@keyframes rustMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.top_logos{
+    position: absolute;
+    right: -40vh;
+    display: grid;
+    place-items: center;
+}
+#top img {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    width: 90vh;
+    height: 90vh;
+}
+
+.top_img_rotate {
+    animation: rotate_logo 10s ease-in-out infinite;
     transform-origin: center;
 }
 
-@keyframes rotateAndScale {
+@keyframes rotate_logo {
     0% {
-        transform: rotate(0deg) scale(1); /* 開始 */
-    }
-    5% {
-        transform: rotate(36deg) scale(1.1); /* 少し拡大 */
-    }
-    45% {
-        transform: rotate(648deg) scale(1); /* 回転中に元サイズに戻す */
+        transform: rotate(0deg);
     }
     50% {
-        transform: rotate(720deg) scale(1); /* 2回転完了 */
+        transform: rotate(360deg);
     }
     100% {
-        transform: rotate(720deg) scale(1); /* 5秒停止 */
+        transform: rotate(360deg);
     }
+}
+
+.top_img_scale{
+    animation: scale_logo 10s linear infinite;
+    transform-origin: center;
+}
+
+@keyframes scale_logo {
+    0% {
+        transform: scale(1);
+    }
+    5% {
+        transform: scale(0.9);
+    }
+    45% {
+        transform:scale(0.9);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+
+
+@media (max-width: 500px) {
+#top h1{
+    font-size: 50px;
+}
+}
+
+@media (max-width: 450px) {
+#top h1{
+    font-size: 40px;
+}
+}
+
+@media (max-width: 370px) {
+
+#top h1{
+    font-size: 30px;
+}
 }
