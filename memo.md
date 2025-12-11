@@ -134,3 +134,155 @@ Discord Community Guidelines に従います。
 ---
 
 このコミュニティが、Rust を学び、楽しみ、成長できる場所になることを願っています！
+
+
+
+了解。**出力専用ブランチ `gh-pages` を使う方式**に切り替えるなら、
+構成・フロー・GitHub Actions の全部を “その方式に最適化した形” でまとめるよ。
+
+以下は **実用性・メンテ性・GitHub Pages の制限**を踏まえた構成。
+
+---
+
+# ✔️ 最終構成（強推奨）
+
+```
+main（開発ブランチ）
+│
+├─ /src        ← 元データ（Markdown・テンプレート・画像）
+├─ /scripts    ← Node.js SSG（自作ビルドスクリプト）
+└─ package.json
+```
+
+```
+gh-pages（出力専用ブランチ）
+│
+└─ ここに dist されたファイルが自動で push され続ける
+```
+
+理由：
+
+1. **main と出力物が完全に分離される**
+   → 開発ブランチが綺麗なまま
+
+2. **GitHub Pages の仕組みに完全準拠**
+   → `gh-pages` ブランチをそのまま公開に設定できる
+
+3. **デプロイ履歴が汚れない（生成物だけのブランチに閉じる）**
+
+4. **古い Pages 設定と新しい Artifact 方式のどちらでも対応できる**
+
+---
+
+# ✔️ 流れ（実運用）
+
+1. main に Markdown or テンプレを push
+2. GitHub Actions が自動ビルド
+3. dist/ を生成
+4. dist/ の中身だけを `gh-pages` に force push
+5. GitHub Pages は `gh-pages` を配信
+
+**本番公開＝`gh-pages`**
+**開発＝main**
+
+この二層構造が一番壊れにくい。
+
+---
+
+# ✔️ GitHub Pages 側の設定
+
+GitHub → リポジトリ → *Settings* → *Pages*
+
+* **Source：Deploy from branch**
+* **Branch：gh-pages / root**
+
+これでOK。
+
+---
+
+# ✔️ GitHub Actions（`gh-pages` ブランチ出力方式の最適版）
+
+`.github/workflows/deploy.yml`
+
+```yaml
+name: Build & Deploy
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - run: npm ci
+      
+      # /scripts/build.js で dist/ を生成する想定
+      - run: node scripts/build.js
+      
+      # dist を gh-pages に強制 push
+      - name: Deploy to gh-pages
+        run: |
+          cd dist
+          git init
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add .
+          git commit -m "Deploy"
+          git push --force https://github.com/${{ github.repository }} HEAD:gh-pages
+```
+
+ポイントの根拠：
+
+* gh-pages は生成物専用なので **force push が安全**
+* Actions 内で **自前の mini-repo** を作って push する方式が一番安定
+* “dist/ をそのまま push” するので GitHub Pages と完璧に連携できる
+
+---
+
+# ✔️ 推奨するディレクトリ構成（SSG として整理）
+
+```
+main
+├── src/
+│   ├── markdown/
+│   │     ├── a.md
+│   │     └── b.md
+│   ├── layouts/
+│   │     ├── base.html
+│   │     └── article.html
+│   └── assets/
+│
+└── scripts/
+    ├── build.js
+    ├── renderMarkdown.js
+    └── generateIndex.js
+
+gh-pages
+└──（生成された index.html / articles / assets など）
+```
+
+---
+
+# ✔️ まとめ
+
+* “gh-pages に生成物を push” 方式は **GitHub Pages で昔から最も安定**
+* main は素材とコードだけ → **クリーンで保守性高い**
+* GitHub Actions で dist を push → **完全自動化**
+
+---
+
+必要なら、次のどれも作れる：
+
+* `/scripts/build.js` の最小実装（Markdown → HTML + layout適用）
+* `generateIndex.js`（記事一覧HTML自動生成）
+* Markdown パーサのおすすめ（remark / marked / custom）
+
+どれ作る？
