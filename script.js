@@ -8,9 +8,12 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         const data = await res.json();
         console.log("お知らせデータ取得:", data);
-        
+
+        // ▼▼▼ ここで3件に制限 ▼▼▼
+        const limited = data.slice(0, 3);
+
         if (box) {
-            data.forEach((entry, index) => {
+            limited.forEach((entry, index) => {
                 const date = new Date(entry.createdAt).toLocaleString();
 
                 const lines = entry.content.split('\n');
@@ -42,7 +45,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 box.appendChild(h3);
                 box.appendChild(divBody);
 
-                if (index !== data.length - 1) {
+                if (index !== limited.length - 1) {
                     const hr = document.createElement("hr");
                     box.appendChild(hr);
                 }
@@ -50,11 +53,11 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
     } catch (err) {
         console.error("お知らせ読み込みでエラー:", err);
-        // エラー時のユーザーへのフィードバック（任意）
         const box = document.getElementById("news_box");
         if(box) box.textContent = "お知らせの読み込み中にエラーが発生しました。";
     }
 });
+
 //
 //  とりあえずAIに改装中ですを表示させるコードを書かせた
 //
