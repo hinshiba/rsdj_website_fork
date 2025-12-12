@@ -26,10 +26,30 @@
     </header>
 
     <div class="bg_red">
+        <h1>News</h1>
         {{articles}}
     </div>
     <style>
-        
+        .bg_red{
+            height: fit-containt;
+            min-height: calc(100vh - 80px);
+            padding-top: 80px;
+        }
+        h2,a{
+            margin: 0;
+            text-decoration: none;
+            color: #222;
+        }
+        .news-item{
+            padding: 10px;
+            cursor:pointer;
+        }
+        .news-item:hover{
+            background-color: #ffffff55;
+        }
+        .news-item p{
+            margin: 2px 0;
+        }
     </style>
 </body>
 </html>

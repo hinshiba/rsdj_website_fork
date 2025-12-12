@@ -26,11 +26,35 @@
     </header>
 
     <div class="bg_red">
-        <article class="news-item">
-      <h2><a href="./article/template/">テスト</a></h2>
+        <h1>News</h1>
+        <hr>
+    <article class="news-item">
+      <h2><a href="./article/001/">初投稿</a></h2>
       <p class="date">2025-12-12</p>
-      <p class="desc">テストです。</p>
+      <p class="desc">初めての投稿です。</p>
     </article>
     </div>
+    <style>
+        .bg_red{
+            height: fit-containt;
+            min-height: calc(100vh - 80px);
+            padding-top: 80px;
+        }
+        h2,a{
+            margin: 0;
+            text-decoration: none;
+            color: #222;
+        }
+        .news-item{
+            padding: 10px;
+            cursor:pointer;
+        }
+        .news-item:hover{
+            background-color: #ffffff55;
+        }
+        .news-item p{
+            margin: 2px 0;
+        }
+    </style>
 </body>
 </html>

@@ -104,6 +104,7 @@ articles.forEach(article => {
   const template = fs.readFileSync(NEWS_LIST_TEMPLATE, "utf8");
 
   const listHtml = articles.map(a => `
+    <hr>
     <article class="news-item">
       <h2><a href="./article/${a.slug}/">${a.title}</a></h2>
       <p class="date">${a.date}</p>
