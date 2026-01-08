@@ -1,26 +1,22 @@
 {% extends "base.html" %} {% block content %}
 <!-- トップセクション -->
-<div>
-  <section
-    id="top"
-    class="top-section"
+
+<section class="top-section">
+  <h1 class="top-title">
+    Rust<br />
+    Developers JP
+  </h1>
+  <a
+    class="btn-primary btn-large"
+    href="https://discord.com/invite/Nus2xg3nF3"
+    >参加する</a
   >
-    <h1 class="top-title">
-      <span class="rust-gradation">Rust</span><br />
-      Developers JP
-    </h1>
-    <a
-      class="btn-primary btn-large"
-      href="https://discord.com/invite/Nus2xg3nF3"
-      >参加する</a
-    >
-    <div class="top-logos">
-      <img class="top-img-rotate" src="{{ get_url(path="img/rust_out.svg") }}" alt="rust logo"
-      width="100" height="100"> <img class="top-img-scale" src="{{ get_url(path="img/rust_in.svg")
-      }}" alt="rust logo" width="100" height="100">
-    </div>
-  </section>
-</div>
+  <div class="top-logos">
+    <img class="top-img-rotate" src="{{ get_url(path="img/rust_out.svg") }}" alt="rust logo"
+    width="100" height="100"> <img class="top-img-scale" src="{{ get_url(path="img/rust_in.svg") }}"
+    alt="rust logo" width="100" height="100">
+  </div>
+</section>
 
 <!-- アバウトセクション -->
 <section
