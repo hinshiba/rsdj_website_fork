@@ -1,11 +1,21 @@
-#top-container {
-  height: 30vh;
+@use "../_var" as *;
+
+#about-section {
+  background: $primary-color;
+}
+
+#about-container {
+  height: 45vh;
+
   position: relative;
   /* flex関連 */
 
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-around;
+  gap: 2rem;
+  padding: 3rem 1rem;
 
   .top-title {
     font-size: 3.75rem;
