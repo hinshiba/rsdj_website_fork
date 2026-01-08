@@ -1,37 +1,6 @@
-/*
- * 宣言
-*/
-$primary-color: #f7cdc7;
-$secondary-color: #2c3e50;
-$rust-color: #ce422b;
-$rust-orange: #f74c00;
-$warning-bg: #fef3c7;
-$warning-text: #92400e;
-
-$white: #fff;
-$black: #000;
-$gray-100: #f7fafc;
-$gray-600: #718096;
-$gray-700: #4a5568;
-
-$font-family: "Helvetica Neue", Arial, sans-serif;
-$container-width: 960px;
-$max-width-4xl: 56rem; // 896px
-
-// 汎用
-$text-color: #222;
-$border-color: #aaa;
-
-// <a>リンク関連
-$link-base-color: #00e;
-$link-visi-color: #70f;
-$link-hove-background-color: #841;
-
-// ヘッダーとフッター
-$link-toppage-color: $text-color;
-
-//
-$container-margin-bottom: 0.4em;
+@use "_var" as *;
+@use "_tag";
+@use "_header";
 
 /* 
  * 広範囲の要素指定&リセット 
@@ -57,37 +26,13 @@ body {
  * tag要素指定 
 */
 
-a {
-  text-decoration: underline;
-
-  &:link {
-    color: $link-base-color;
-  }
-
-  &:visited {
-    color: $link-visi-color;
-  }
-
-  &:focus,
-  &:hover {
-    text-decoration: none;
-    color: $white;
-    background: $link-base-color;
-  }
-
-  &:active {
-    background: $white;
-    color: $link-base-color;
-  }
-}
-
 // 見出し関連
 
 h1,
 h2,
 h3,
 h4 {
-  margin-bottom: $container-margin-bottom;
+  // margin-bottom: $container-margin-bottom;
 }
 
 h1 {
@@ -127,59 +72,6 @@ li {
 }
 
 // ヘッダーとフッター
-
-header#header-id {
-  border-bottom: 1px solid $border-color;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 2%;
-
-  h1 {
-    margin-bottom: 0;
-
-    a {
-      font-weight: bold;
-
-      &:link {
-        color: $link-toppage-color;
-      }
-
-      &:visited {
-        color: $link-toppage-color;
-      }
-
-      &:focus,
-      &:hover {
-        background: $white;
-        text-decoration: none;
-      }
-
-      &:active {
-        background: $white;
-        color: $link-toppage-color;
-      }
-    }
-  }
-
-  // nav ul {
-  //     list-style: none;
-
-  //     li {
-  //         display: inline-block;
-  //         margin-left: 20px;
-
-  //         a {
-  //             color: $text-color;
-
-  //             &:hover {
-  //                 color: $primary-color;
-  //                 text-decoration: none;
-  //             }
-  //         }
-  //     }
-  // }
-}
 
 footer#footer-id {
   text-align: center;
@@ -479,70 +371,6 @@ textarea {
 
     &:hover {
       opacity: 0.8;
-    }
-  }
-}
-
-// ヘッダー
-.header {
-  padding: 1rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid $border-color;
-
-  .header-title {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    font-weight: bold;
-    gap: 0.5rem;
-    flex-grow: 1;
-    margin-bottom: 0;
-  }
-
-  .header-link {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 0.5rem;
-    text-decoration: none;
-    color: $text-color;
-
-    &:hover {
-      text-decoration: none;
-      background: transparent;
-    }
-  }
-
-  .header-logo {
-    display: block;
-  }
-
-  .header-nav {
-    .nav-list {
-      display: flex;
-      flex-direction: row;
-      gap: 1rem;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-
-      li {
-        margin: 0;
-      }
-
-      .nav-link {
-        text-decoration: none;
-        color: $text-color;
-
-        &:hover {
-          text-decoration: underline;
-          background: transparent;
-        }
-      }
     }
   }
 }

@@ -16,49 +16,37 @@
   </head>
 
   <body>
-    <!-- ヘッダー -->
-    <header class="header">
-      <h1 class="header-title">
+    <header>
+      <a href="{{ config.base_url | safe }}">
+        <img src="{{ get_url(path="img/rust.svg") }}" alt="Rust Lang logo" width="70em"
+        height="70em">
+        <span>Rust Developer JP</span>
+      </a>
+
+      <nav>
         <a
-          class="header-link"
+          class="nav-link"
           href="{{ config.base_url | safe }}"
+          >ホーム</a
         >
-          <img class="header-logo" src="{{ get_url(path="img/rust.svg") }}" alt="Rust Developer JP"
-          width="50" height="50">
-          <span>Rust Developer JP</span>
-        </a>
-      </h1>
-      <nav class="header-nav">
-        <ul class="nav-list">
-          <li>
-            <a
-              class="nav-link"
-              href="{{ config.base_url | safe }}"
-              >ホーム</a
-            >
-          </li>
-          <li>
-            <a
-              class="nav-link"
-              href="{{ config.base_url | safe }}/about"
-              >私たちについて</a
-            >
-          </li>
-          <li>
-            <a
-              class="nav-link"
-              href="{{ config.base_url | safe }}/news"
-              >お知らせ</a
-            >
-          </li>
-          <li>
-            <a
-              class="nav-link"
-              href="{{ config.base_url | safe }}/contact"
-              >お問い合わせ</a
-            >
-          </li>
-        </ul>
+
+        <a
+          class="nav-link"
+          href="{{ config.base_url | safe }}/about"
+          >私たちについて</a
+        >
+
+        <a
+          class="nav-link"
+          href="{{ config.base_url | safe }}/news"
+          >お知らせ</a
+        >
+
+        <a
+          class="nav-link"
+          href="{{ config.base_url | safe }}/contact"
+          >お問い合わせ</a
+        >
       </nav>
     </header>
 
