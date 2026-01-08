@@ -491,7 +491,7 @@ textarea {
 }
 
 .top-section {
-    height: 95vh;
+    height: 30vh;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
@@ -534,35 +534,6 @@ textarea {
         img {
             grid-area: 1 / 1;
         }
-
-        .top-img-rotate {
-            animation: rotate 20s linear infinite;
-        }
-
-        .top-img-scale {
-            animation: scale-pulse 2s ease-in-out infinite;
-        }
-    }
-}
-
-@keyframes rotate {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-@keyframes scale-pulse {
-    0%,
-    100% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.1);
     }
 }
 
