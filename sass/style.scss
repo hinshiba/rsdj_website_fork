@@ -1,6 +1,8 @@
 @use "_var" as *;
 @use "_tag";
 @use "_header";
+@use "_section";
+@use "sections/sec-top";
 
 /* 
  * 広範囲の要素指定&リセット 
@@ -53,15 +55,6 @@ h4 {
 
 // 汎用セクション
 
-section {
-  padding: 5px 0 0;
-  border-bottom: 1px solid $border-color;
-
-  &:last-of-type {
-    border-bottom: none;
-  }
-}
-
 ul {
   padding-left: 2em;
   margin-bottom: 2em;
@@ -95,11 +88,6 @@ textarea {
 /* 
  * class要素指定 
 */
-.container {
-  max-width: $container-width;
-  margin: 0 auto;
-  padding: 0 20px;
-}
 
 // 一行に入力欄と送信ボタンを配置する div向けclass
 .div-input-inline {
@@ -185,40 +173,6 @@ textarea {
         background-color: $primary-color;
         text-decoration: none;
       }
-    }
-  }
-}
-
-.top-section {
-  height: 30vh;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  .top-title {
-    font-size: 3.75rem;
-    line-height: 1;
-    margin: 0;
-
-    @media (max-width: 768px) {
-      font-size: 2.5rem;
-    }
-  }
-
-  .top-logos {
-    position: absolute;
-    right: 2rem;
-    top: 50%;
-    transform: translateY(-50%);
-    display: grid;
-    place-items: center;
-
-    img {
-      grid-area: 1 / 1;
     }
   }
 }

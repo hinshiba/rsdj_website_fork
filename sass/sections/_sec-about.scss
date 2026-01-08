@@ -1,0 +1,27 @@
+#top-container {
+  height: 30vh;
+  position: relative;
+  /* flex関連 */
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  .top-title {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+
+  .top-logos {
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    display: grid;
+    place-items: center;
+
+    img {
+      grid-area: 1 / 1;
+    }
+  }
+}
