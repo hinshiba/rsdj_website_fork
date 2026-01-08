@@ -1,7 +1,7 @@
 /*
  * 宣言
 */
-$primary-color: #3498db;
+$primary-color: #f7cdc7;
 $secondary-color: #2c3e50;
 $rust-color: #ce422b;
 $rust-orange: #f74c00;
@@ -109,7 +109,7 @@ h4 {
 // 汎用セクション
 
 section {
-  padding: 30px 0 0;
+  padding: 5px 0 0;
   border-bottom: 1px solid $border-color;
 
   &:last-of-type {
@@ -297,6 +297,150 @@ textarea {
   }
 }
 
+.top-section {
+  height: 30vh;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .top-title {
+    font-size: 3.75rem;
+    line-height: 1;
+    margin: 0;
+
+    @media (max-width: 768px) {
+      font-size: 2.5rem;
+    }
+  }
+
+  .top-logos {
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    display: grid;
+    place-items: center;
+
+    img {
+      grid-area: 1 / 1;
+    }
+  }
+}
+
+// アバウトセクション
+.about-section {
+  width: 100vw;
+  background: $primary-color;
+  color: $black;
+
+  .about-container {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    max-width: $max-width-4xl;
+    align-items: center;
+    gap: 2rem;
+    padding: 3rem 1rem;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+
+    .about-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h2 {
+        margin-bottom: 1rem;
+      }
+
+      p {
+        line-height: 1.8;
+        margin-bottom: 1rem;
+      }
+    }
+
+    .about-image {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+// ニュースセクション
+.news-section {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: $max-width-4xl;
+  padding: 3rem 1rem;
+
+  h2 {
+    margin-bottom: 2rem;
+  }
+
+  .news-list {
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 1rem;
+  }
+
+  .news-item {
+    margin-bottom: 2rem;
+
+    .news-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      text-decoration: none;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    .news-date {
+      font-size: 0.875rem;
+      color: $gray-600;
+      margin: 0.25rem 0;
+    }
+
+    .news-description {
+      margin-top: 0.5rem;
+    }
+  }
+}
+
+// 参加セクション
+.join-section {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: $max-width-4xl;
+  padding: 3rem 1rem;
+
+  h2 {
+    margin-bottom: 1rem;
+  }
+
+  p {
+    line-height: 1.8;
+    margin-bottom: 1rem;
+  }
+}
+
 /*
  * ID指定
 */
@@ -440,7 +584,7 @@ textarea {
 // ボタン
 .btn-primary {
   display: inline-block;
-  background: linear-gradient(135deg, $rust-color, $rust-orange);
+  background: $rust-color;
   color: $white;
   padding: 0.75rem 1.5rem;
   border-radius: 0.375rem;
@@ -449,170 +593,20 @@ textarea {
   transition: transform 0.2s, box-shadow 0.2s;
   margin-top: 1rem;
 
+  &:link,
+  &:visited {
+    color: $white;
+  }
+
   &:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(206, 66, 43, 0.3);
-    background: linear-gradient(135deg, $rust-orange, $rust-color);
+    background: $rust-orange;
     color: $white;
   }
 
   &.btn-large {
     padding: 1.25rem 2rem;
     font-size: 1.125rem;
-  }
-}
-
-// Rustグラデーション
-.rust-gradation {
-  background: linear-gradient(135deg, $rust-color, $rust-orange);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-weight: bold;
-}
-
-.top-section {
-  height: 30vh;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  .top-title {
-    font-size: 3.75rem;
-    line-height: 1;
-    margin: 0;
-
-    @media (max-width: 768px) {
-      font-size: 2.5rem;
-    }
-  }
-
-  .top-logos {
-    position: absolute;
-    right: 2rem;
-    top: 50%;
-    transform: translateY(-50%);
-    display: grid;
-    place-items: center;
-
-    img {
-      grid-area: 1 / 1;
-    }
-  }
-}
-
-// アバウトセクション
-.about-section {
-  // トップセクション
-  .bg-red-gradient {
-    width: 100vw;
-    margin-left: calc(50% - 50vw);
-    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 50%, #c44569 100%);
-    position: relative;
-  }
-
-  display: flex;
-  flex-direction: row;
-  margin: 0 auto;
-  max-width: $max-width-4xl;
-  align-items: center;
-  gap: 2rem;
-  padding: 3rem 1rem;
-
-  @media (max-width: 768px) {
-    flex-direction: column;
-  }
-
-  .about-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    h2 {
-      margin-bottom: 1rem;
-    }
-
-    p {
-      line-height: 1.8;
-      margin-bottom: 1rem;
-    }
-  }
-
-  .about-image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-
-    img {
-      max-width: 100%;
-      height: auto;
-    }
-  }
-}
-
-// ニュースセクション
-.news-section {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  max-width: $max-width-4xl;
-  padding: 3rem 1rem;
-
-  h2 {
-    margin-bottom: 2rem;
-  }
-
-  .news-list {
-    list-style: none;
-    width: 100%;
-    padding: 0;
-    margin-bottom: 1rem;
-  }
-
-  .news-item {
-    margin-bottom: 2rem;
-
-    .news-title {
-      font-size: 1.25rem;
-      font-weight: 600;
-      text-decoration: none;
-
-      &:hover {
-        opacity: 0.8;
-      }
-    }
-
-    .news-date {
-      font-size: 0.875rem;
-      color: $gray-600;
-      margin: 0.25rem 0;
-    }
-
-    .news-description {
-      margin-top: 0.5rem;
-    }
-  }
-}
-
-// 参加セクション
-.join-section {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  max-width: $max-width-4xl;
-  padding: 3rem 1rem;
-
-  h2 {
-    margin-bottom: 1rem;
-  }
-
-  p {
-    line-height: 1.8;
-    margin-bottom: 1rem;
   }
 }
