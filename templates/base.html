@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ config.title }}</title>
+    <!--noformat-->
+    <link rel="stylesheet" href="{{ get_url(path="style.css") | safe }}">
+    <!--noformat-->
+</head>
+
+<body>
+    <header id="header-id">
+        <h1><a href="{{ config.base_url | safe }}">{{ config.title }}</a></h1>
+        <nav>
+            <a href="{{ config.base_url | safe }}/about">私たちについて</a>
+            <a href="{{ config.base_url | safe }}/news">お知らせ</a>
+            <a href="{{ config.base_url | safe }}/contact">お問い合わせ</a>
+        </nav>
+    </header>
+    <section class="section">
+        <div class="container">
+            {% block content %} {% endblock content %}
+        </div>
+    </section>
+    <footer id="footer-id">
+        <p>当団体はrust-jp.rsとは異なる組織です．</p>
+        <p>&copy; Rust Developer Japan. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
