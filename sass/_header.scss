@@ -20,24 +20,12 @@ header {
     display: inline-flex;
     align-items: center;
     gap: 0.2em;
-
-    &:link {
-      color: $link-toppage-color;
-    }
-
-    &:visited {
-      color: $link-toppage-color;
-    }
+    color: $black;
 
     &:focus,
     &:hover {
       background: $white;
       text-decoration: none;
-    }
-
-    &:active {
-      background: $white;
-      color: $link-toppage-color;
     }
   }
 
