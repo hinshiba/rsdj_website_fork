@@ -2,14 +2,16 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
     <title>{% block title %}{{ config.title }}{% endblock title %}</title>
     <meta
       name="description"
       content="{% block description %}日本のRust開発者コミュニティへようこそ!{% endblock description %}"
     />
-    <link rel="icon" href="{{ get_url(path="favicon.ico") }}"
-    type="image/x-icon">
+    <link rel="icon" href="{{ get_url(path="favicon.ico") }}" type="image/x-icon">
     <!--noformat-->
     <link rel="stylesheet" href="{{ get_url(path="style.css") | safe }}">
     <!--noformat-->
@@ -32,29 +34,42 @@
     <!-- ヘッダー -->
     <header class="header">
       <h1 class="header-title">
-        <a class="header-link" href="{{ config.base_url | safe }}">
-          <img class="header-logo" src="{{ get_url(path="img/rust.svg") }}"
-          alt="Rust Developer JP" width="50" height="50">
+        <a
+          class="header-link"
+          href="{{ config.base_url | safe }}"
+        >
+          <img class="header-logo" src="{{ get_url(path="img/rust.svg") }}" alt="Rust Developer JP"
+          width="50" height="50">
           <span>Rust Developer JP</span>
         </a>
       </h1>
       <nav class="header-nav">
         <ul class="nav-list">
           <li>
-            <a class="nav-link" href="{{ config.base_url | safe }}">ホーム</a>
+            <a
+              class="nav-link"
+              href="{{ config.base_url | safe }}"
+              >ホーム</a
+            >
           </li>
           <li>
-            <a class="nav-link" href="{{ config.base_url | safe }}/about"
+            <a
+              class="nav-link"
+              href="{{ config.base_url | safe }}/about"
               >私たちについて</a
             >
           </li>
           <li>
-            <a class="nav-link" href="{{ config.base_url | safe }}/news"
+            <a
+              class="nav-link"
+              href="{{ config.base_url | safe }}/news"
               >お知らせ</a
             >
           </li>
           <li>
-            <a class="nav-link" href="{{ config.base_url | safe }}/contact"
+            <a
+              class="nav-link"
+              href="{{ config.base_url | safe }}/contact"
               >お問い合わせ</a
             >
           </li>
@@ -68,21 +83,19 @@
     <!-- フッター -->
     <footer class="footer">
       <h1 class="footer-title">
-        <img class="footer-logo" src="{{ get_url(path="img/rust.svg") }}"
-        alt="Rust Developer JP" width="40" height="40">
+        <img class="footer-logo" src="{{ get_url(path="img/rust.svg") }}" alt="Rust Developer JP"
+        width="40" height="40">
         <span>Rust Developer JP</span>
       </h1>
       <p>当団体はrust-jp.rsとは異なる組織です．</p>
       <span id="copyright"
-        >&copy; <span id="current-year"></span> Rust Developer Japan. All rights
-        reserved.</span
+        >&copy; <span id="current-year"></span> Rust Developer Japan. All rights reserved.</span
       >
     </footer>
 
     <script>
       // 現在の年を自動設定
-      document.getElementById("current-year").textContent =
-        new Date().getFullYear();
+      document.getElementById("current-year").textContent = new Date().getFullYear();
     </script>
   </body>
 </html>
