@@ -52,10 +52,10 @@ export default function Home() {
         <div className="md:w-1/2 w-full pr-0 md:pr-8 flex flex-col justify-center">
           <h2>Rust Developers JPとは?</h2>
           <p>
-            Rust Developers JP は、Rust を日本語で学びたい方や意見を交わしたい方のための Discord
-            コミュニティです。日本には既に大きな Rust コミュニティ（rust-jp）が存在しますが、Discord
-            上で活動する場が限られていたため、本コミュニティを設立しました。Discord は洗練された UI
-            や豊富な Bot 機能、高品質な通話など、開発者同士の交流に適した環境が整っています。
+            Rust Developers JP は，Rust を日本語で学びたい方や意見を交わしたい方のための Discord
+            コミュニティです．日本には既に大きな Rust コミュニティ（rust-jp）が存在しますが，Discord
+            上で活動する場が限られていたため，本コミュニティを設立しました．Discord は洗練された UI
+            や豊富な Bot 機能，高品質な通話など，開発者同士の交流に適した環境が整っています．
           </p>
           <Link
             href="/about"
@@ -118,12 +118,12 @@ export default function Home() {
         id="join_us"
         className="flex flex-col mx-auto max-w-4xl items-start gap-8 px-4 py-12 w-full"
       >
-        <h2>さあ、私たちと一緒に Rust を学びましょう!</h2>
+        <h2>さあ，私たちと一緒に Rust を学びましょう!</h2>
         <p>
-          Rust Developers JP は、初心者から経験豊富な開発者まで、すべてのレベルの Rust
-          プログラマーを歓迎します。質問がある場合や、プロジェクトについて話し合いたい場合、または単に
+          Rust Developers JP は，初心者から経験豊富な開発者まで，すべてのレベルの Rust
+          プログラマーを歓迎します．質問がある場合や，プロジェクトについて話し合いたい場合，または単に
           Rust
-          コミュニティの一員になりたい場合は、ぜひ参加してください。私たちはあなたを歓迎し、サポートする準備ができています！
+          コミュニティの一員になりたい場合は，ぜひ参加してください．私たちはあなたを歓迎し，サポートする準備ができています！
         </p>
         <Link
           href={SiteSetting.SocialLinks.Discord}

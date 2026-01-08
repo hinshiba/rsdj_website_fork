@@ -15,7 +15,7 @@ export default function Header() {
       <Attention
         message={
           <>
-            🚧 このサイトは現在制作中です。フィードバックは
+            🚧 このサイトは現在制作中です．フィードバックは
             <Link
               href="https://github.com/Rust-Developers-JP/official_site/issues"
               className="underline"
@@ -24,7 +24,7 @@ export default function Header() {
             >
               こちら
             </Link>
-            からお願いします。
+            からお願いします．
           </>
         }
         variant="warning"

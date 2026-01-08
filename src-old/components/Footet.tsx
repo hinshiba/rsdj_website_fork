@@ -12,7 +12,7 @@ export default function Footer() {
         />
         Rust Developer JP
       </h1>
-      <p>当団体はrust-jp.rsとは異なる組織です。</p>
+      <p>当団体はrust-jp.rsとは異なる組織です．</p>
       <span id="copyright">
         &copy; {new Date().getFullYear()} Rust Developer Japan. All rights reserved.
       </span>
