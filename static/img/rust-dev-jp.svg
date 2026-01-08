@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   sodipodi:docname="rust-dev-jp.svg"
+   inkscape:export-filename="rust-dev-jp.png"
+   inkscape:export-xdpi="300"
+   inkscape:export-ydpi="300"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.64693625"
+     inkscape:cx="57.192652"
+     inkscape:cy="564.97066"
+     inkscape:window-width="1409"
+     inkscape:window-height="1230"
+     inkscape:window-x="849"
+     inkscape:window-y="651"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <rect
+       x="259.043"
+       y="309.32139"
+       width="50.278389"
+       height="71.04555"
+       id="rect2466" />
+    <rect
+       x="259.30093"
+       y="268.73611"
+       width="387.65238"
+       height="333.53394"
+       id="rect2410" />
+    <rect
+       x="277.62415"
+       y="323.5305"
+       width="333.36758"
+       height="259.043"
+       id="rect2404" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <circle
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:10;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+       id="path4451"
+       cx="110.98518"
+       cy="114.25701"
+       r="65" />
+    <circle
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:10;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+       id="path234"
+       cx="110.98518"
+       cy="114.25701"
+       r="67.73333" />
+    <circle
+       style="fill:#c01010;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:10;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+       id="path2524"
+       cx="110.98518"
+       cy="114.25701"
+       r="20.910549" />
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text2402"
+       style="font-size:16px;line-height:1.51;font-family:'Moralerspace Argon HW';-inkscape-font-specification:'Moralerspace Argon HW';white-space:pre;shape-inside:url(#rect2404);display:inline;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:37.7953;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke" />
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,-3.5252245,2.5572295)"
+       id="text2408"
+       style="font-size:64px;line-height:1.51;font-family:'Moralerspace Argon HW';-inkscape-font-specification:'Moralerspace Argon HW';white-space:pre;shape-inside:url(#rect2410);display:inline;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:37.7953;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+       x="0"
+       y="0"><tspan
+         x="259.30078"
+         y="341.37633"
+         id="tspan1129"><tspan
+           style="font-family:Arial;-inkscape-font-specification:Arial;text-align:justify;fill:#000000 icc-color(Japan-Color-2011-Coated, 0, 0, 0, 0);stroke:none"
+           id="tspan1127">Rust
+</tspan></tspan><tspan
+         x="259.30078"
+         y="444.68803"
+         id="tspan1139"><tspan
+           style="font-family:Arial;-inkscape-font-specification:Arial;text-align:justify;fill:#000000 icc-color(Japan-Color-2011-Coated, 0, 0, 0, 0);stroke:none"
+           id="tspan1131">De </tspan><tspan
+           style="fill:#ffffff icc-color(Japan-Color-2011-Coated, 0, 0, 0, 0);stroke:none"
+           id="tspan1133">velo</tspan><tspan
+           style="font-family:Arial;-inkscape-font-specification:Arial;fill:#ffffff"
+           id="tspan1135"> </tspan><tspan
+           style="font-family:Arial;-inkscape-font-specification:Arial;text-align:justify;fill:#000000 icc-color(Japan-Color-2011-Coated, 0, 0, 0, 0);stroke:none"
+           id="tspan1137">per
+</tspan></tspan><tspan
+         x="259.30078"
+         y="547.99974"
+         id="tspan1143"><tspan
+           style="font-family:Arial;-inkscape-font-specification:Arial;text-align:justify;fill:#000000 icc-color(Japan-Color-2011-Coated, 0, 0, 0, 0);stroke:none"
+           id="tspan1141">JP</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text2464"
+       style="font-size:64px;line-height:1.51;font-family:'Moralerspace Argon HW';-inkscape-font-specification:'Moralerspace Argon HW';white-space:pre;shape-inside:url(#rect2466);display:inline;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:37.7953;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke" />
+  </g>
+</svg>
